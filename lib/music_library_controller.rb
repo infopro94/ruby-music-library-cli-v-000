@@ -54,7 +54,7 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:" #prompts user to enter an artist
     # binding.pry
-    artist_name = gets.strip #accepts user input
+    artist = gets.strip #accepts user input
      if find_by_name(name) == artist.name
        puts "#{index+1}, #{song.name}"#prints all songs by a particular artist in a numbered, alphabetized list
       #does nothing if no matching artist is found

@@ -81,11 +81,11 @@ class MusicLibraryController
     sort_songs.each_with_index { |song, index| puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
 }
     if number > 0 && number < sort_songs.length
-      puts "Playing #{songs[s.number - 1].name} by #{songs[s.number -1].artist.name}"
+      puts "Playing #{songs.name} by #{songs.artist.name}"
 
     #does not 'puts' anything out if a matching song is not found
     #checks that the user entered a number between 1 and the total number of songs
-  end
+    end
   end
 
 end

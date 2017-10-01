@@ -63,13 +63,13 @@ class MusicLibraryController
   end
 
   def list_songs_by_genre
-    puts "Please enter the name of an artist:" #prompts user to enter a genre
+    puts "Please enter the name of an genre:" #prompts user to enter a genre
     g_name = gets.chomp #accepts user input
      genre = Genre.find_by_name(g_name)
       if genre != nil
         songs = genre.songs.sort_by {|s| s.name} #prints all songs by a particular genre in a numbered, alphabetized list
         songs.each_with_index {|s, i| puts "#{i + 1}. #{s.name} - #{s.genre.name}"} 
-      end    
+      end
     #does nothing if no matching genre is found
   end
 

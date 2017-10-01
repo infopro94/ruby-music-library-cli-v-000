@@ -2,10 +2,6 @@ require 'pry'
 
 class MusicLibraryController
 
-  # extend Concerns::Findable
-  #
-  # attr_accessor :songs
-
   def initialize(path="./db/mp3s")
     MusicImporter.new(path).import
   end

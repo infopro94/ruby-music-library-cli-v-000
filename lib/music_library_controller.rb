@@ -82,7 +82,7 @@ class MusicLibraryController
 }
     if s.number > 0 && < songs.length
       puts "Playing #{songs[s.number - 1].name} by #{songs[s.number -1].artist.name}"
-    end
+    
     #does not 'puts' anything out if a matching song is not found
     #checks that the user entered a number between 1 and the total number of songs
   end

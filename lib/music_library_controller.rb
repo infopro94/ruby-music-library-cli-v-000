@@ -53,7 +53,6 @@ class MusicLibraryController
 
   def list_songs_by_artist
     puts "Please enter the name of an artist:" #prompts user to enter an artist
-    # binding.pry
     a_name = gets.chomp #accepts user input
      artist = Artist.find_by_name(a_name)
       if artist != nil
@@ -61,7 +60,6 @@ class MusicLibraryController
         songs.each_with_index {|s, i| puts "#{i + 1}. #{s.name} - #{s.genre.name}"} #prints all songs by a particular artist in a numbered, alphabetized list
       #does nothing if no matching artist is found
       end
-    # end
   end
 
   def list_songs_by_genre

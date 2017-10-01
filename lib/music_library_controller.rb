@@ -79,9 +79,10 @@ class MusicLibraryController
     puts "Which song number would you like to play?" #prompts user to choose a song from the alphabetized list output by #list_songs
     number = gets.strip.to_i #accepts user input
     songs = Song.all
-    songs = songs.sort_by { |s| s.name } #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
+    songs = songs.sort_by { |s| s.name } 
     if number > 0 && number < songs.length #checks that the user entered a number between 1 and the total number of songs
-      puts "Playing #{songs[number - 1].name} by #{songs[number - 1].artist.name}"  #does not 'puts' anything out if a matching song is not found
+      puts "Playing #{songs[number - 1].name} by #{songs[number - 1].artist.name}"  #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
+      #does not 'puts' anything out if a matching song is not found
     end
   end
 

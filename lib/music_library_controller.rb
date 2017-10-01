@@ -78,7 +78,7 @@ class MusicLibraryController
     number = gets.strip.to_i #accepts user input
     songs = Song.all
     sort_songs = songs.sort_by { |s| s.name } #upon receiving valid input 'plays' the matching song from the alphabetized list output by #list_songs
-    sort_songs.each_with_index { |song, index| puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
+    # sort_songs.each_with_index { |song, index| puts "#{index + 1}. #{song.artist.name} - #{song.name} - #{song.genre.name}"
 }
     if number > 0 && number < sort_songs.length
       puts "Playing #{songs.name} by #{songs.artist.name}"

@@ -58,7 +58,7 @@ class MusicLibraryController
      artist = Artist.find_by_name(a_name)
       if artist != nil
         songs = artist.songs.sort_by {|s| s.name}
-        artist.songs.each_with_index {|s, i| puts "#{index + 1}. - #{song.name}"} #prints all songs by a particular artist in a numbered, alphabetized list
+        songs.each_with_index {|s, i| puts "#{index + 1}. - #{song.name}"} #prints all songs by a particular artist in a numbered, alphabetized list
       #does nothing if no matching artist is found
       end
     # end

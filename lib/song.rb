@@ -27,10 +27,6 @@ class Song
       @@all << self
     end
 
-    # def self.create(name)
-    #   self.new(name).tap{|a| a.save} #initializes and saves the song
-    # end
-
     def artist=(artist)
       @artist = artist
       artist.add_song(self)

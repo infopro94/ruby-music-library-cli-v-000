@@ -54,11 +54,11 @@ class MusicLibraryController
   def list_songs_by_artist
     puts "Please enter the name of an artist:" #prompts user to enter an artist
     # binding.pry
-    a_name = gets.strip #accepts user input
+    a_name = gets.chomp #accepts user input
      artist = Artist.find_by_name(name)
       if artist != nil
         songs = artist.songs.sort_by {|s| s.name}
-        artist.songs.each_with_index {|s, i| puts "#{index + 1}. - #{song.name}"} #prints all songs by a particular artist in a numbered, alphabetized list       
+        artist.songs.each_with_index {|s, i| puts "#{index + 1}. - #{song.name}"} #prints all songs by a particular artist in a numbered, alphabetized list
       #does nothing if no matching artist is found
       end
     # end

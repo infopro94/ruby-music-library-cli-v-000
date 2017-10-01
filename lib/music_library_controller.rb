@@ -2,9 +2,9 @@ require 'pry'
 
 class MusicLibraryController
 
-  extend Concerns::Findable
-
-  attr_accessor :songs
+  # extend Concerns::Findable
+  # 
+  # attr_accessor :songs
 
   def initialize(path="./db/mp3s")
     MusicImporter.new(path).import
@@ -52,10 +52,9 @@ class MusicLibraryController
   end
 
   def list_songs_by_artist
-    input = ""
     puts "Please enter the name of an artist:" #prompts user to enter an artist
     binding.pry
-    input = gets.strip #accepts user input
+    artist_name = gets.strip #accepts user input
      if find_by_name(name) == artist.name
        puts "#{index+1}, #{song.name}"#prints all songs by a particular artist in a numbered, alphabetized list
       #does nothing if no matching artist is found

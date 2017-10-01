@@ -86,5 +86,6 @@ class MusicLibraryController
     #does not 'puts' anything out if a matching song is not found
     #checks that the user entered a number between 1 and the total number of songs
   end
+  end
 
 end
